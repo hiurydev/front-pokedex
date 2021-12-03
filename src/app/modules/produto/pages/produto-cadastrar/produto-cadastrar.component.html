@@ -1,0 +1,67 @@
+
+
+    <div class="row col-md-12">
+        <div class="form-group col-md-12">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome" [(ngModel)]="produto.nome">
+        </div>
+    </div>
+    
+    <div class="row col-md-12">
+        <div class="form-group col-md-4">
+            <label for="descricao">Descrição</label>
+            <input type="descricao" class="form-control" id="descricao" placeholder="Descrição" [(ngModel)]="produto.descricao">
+        </div>
+        <div class="form-group col-md-8">
+            <label for="complemento">Complemento</label>
+            <input type="text" class="form-control" id="complemento" placeholder="Complemento" [(ngModel)]="produto.complemento">
+        </div>
+    </div>
+    
+    <div class="row col-md-12">
+        <div class="form-group col-md-2">
+            <label for="valor">Valor</label>
+            <input type="text" class="form-control" id="valor" placeholder="Valor" [(ngModel)]="produto.valor">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="categoriaProduto">UM</label>
+            <select class="form-control" [(ngModel)]="produto.unidadeMedida">
+                <option value="UN">Unidade</option>
+                <option value="KG">Kilo</option>
+                <option value="ML">Milílitro</option>
+                <option value="TN">Tonelada</option>
+                <option value="MT">Metro</option>
+                <option value="MT2">Metro²</option>
+                <option value="MT3">Metro³</option>
+                <option value="LT">Litros</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="qtde">Quantidade</label>
+            <input type="text" class="form-control" id="qtde" placeholder="Quantidade" [(ngModel)]="produto.qtde">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="categoriaProduto">Categoria</label>
+            <select class="form-control" [(ngModel)]="produto.categoria">
+                <option *ngFor="let categoria of categorias" value="{{categoria.id}}" id="categoriaProduto">{{categoria.descricao}}</option>
+            </select>
+        </div>
+    </div>
+   
+    <div class="row col-md-12">
+        <div class="form-group col-md-6">
+            <label for="fabricante">Fabricante</label>
+            <input type="text" class="form-control" id="fabricante" placeholder="Fabricante" [(ngModel)]="produto.fabricante">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="fornecedor">Fornecedor</label>
+            <input type="text" class="form-control" id="fornecedor" placeholder="Fornecedor" [(ngModel)]="produto.fornecedor">
+        </div>
+    </div>
+    
+    <div class="row col-md-12">
+        <div class="form-group col-md-6">
+            <button type="submit" class="btn btn-success" (click)="salvarProduto()">Salvar</button>
+        </div>
+    </div>
+
