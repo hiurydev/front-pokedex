@@ -1,0 +1,45 @@
+<!-- 
+    <div class="col-md-3">
+        <button (click)="visualizar(categoria)">Visualizar</button>
+        <button (click)="atualizar(produto)">Atualizar</button>
+    </div>
+</div> -->
+
+<div class="container" >
+    <div class="panel panel-default">
+
+        <div class="panel-heading"> 
+            <span>Lista de Pokemons</span>
+            <div class="pull-right">
+                <button class="btn btn-sm btn-success" style="margin-top: -7px;" 
+                    (click)="novoPokemon()" >Novo Pokemon</button>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                  <th class="col-md-1">Código</th>
+                  <th class="col-md-5">Nome</th>
+                  <th class="col-md-2">Porte</th>
+                  <th class="col-md-2">Tipo</th>
+                  <th class="col-md-1 text-center">Editar</th>
+                  <th class="col-md-1 text-center">Deletar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let pokemon of pokemons.conteudo">
+                  <td> {{pokemon.id}} </td>  
+                  <td> {{pokemon.nome}} </td>  
+                  <td> {{pokemon.porte}} </td>  
+                  <td> {{pokemon.tipoPokemon}} </td>
+                  <td class="text-center">
+                    <button class="btn btn-xs btn-default" (click)="editarPokemon(pokemon)">Editar</button>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-xs btn-danger" (click)="deletarPokemon(pokemon)">Excluir</button>
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>

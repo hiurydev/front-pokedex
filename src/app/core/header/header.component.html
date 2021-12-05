@@ -1,5 +1,32 @@
-<div class="page-header">
-    <h1>
-        Pokedex
-    </h1>
-</div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img alt="Brand" src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Pokebola-Pok%C3%A9mon-PNG.png" width="30" height="30">
+        </a>
+      </div>
+  
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a [routerLink]="['pokemon/lista']">
+                    <span>{{ 'Pokemons' }}</span>
+                  </a>
+            </li>
+            <li>
+                <a href="#">Habilidades</a>
+            </li>
+            <li>
+                <a href="#">Vantagens</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

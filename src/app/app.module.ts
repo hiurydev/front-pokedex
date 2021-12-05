@@ -8,6 +8,7 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { CategoriaModule } from './modules/categoria/categoria.module';
 import { ProdutoModule } from './modules/produto/produto.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonModule } from './modules/pokemon/pokemon.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
     CategoriaModule,
-    ProdutoModule
+    ProdutoModule,
+    PokemonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

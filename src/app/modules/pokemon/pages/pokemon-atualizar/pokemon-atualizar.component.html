@@ -1,0 +1,54 @@
+<div class="container" >
+    <div class="panel panel-default">
+
+        <div class="panel-heading"> 
+            <span>Editar Pokemon</span>
+            <div class="pull-right">
+                <button class="btn btn-default" style="margin-top: -7px;"
+                    (click)="voltar()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+            </div>
+        </div>
+        <div class="panel-body">
+
+            <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome" [(ngModel)]="pokemon.nome">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="porte">Porte</label>
+                <select class="form-control" [(ngModel)]="pokemon.porte">
+                    <option value="PEQUENO">Pequeno</option>
+                    <option value="MEDIO">Médio</option>
+                    <option value="GRANDE">Grande</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="tipo">Tipo</label>
+                <select class="form-control" [(ngModel)]="pokemon.tipoPokemon">
+                    <option value="PLANTA">Planta</option>
+                    <option value="FOGO">Fogo</option>
+                    <option value="AGUA">Água</option>
+                    <option value="INSETO">Inseto</option>
+                    <option value="NORMAL">Normal</option>
+                    <option value="VENENOSO">Venenoso</option>
+                    <option value="ELETRICO">Elétrico</option>
+                    <option value="TERRA">Terra</option>
+                    <option value="LUTADOR">Lutador</option>
+                    <option value="PSIQUICO">Psíquico</option>
+                    <option value="PEDRA">Pedra</option>
+                    <option value="VOADOR">Voador</option>
+                    <option value="FANTASMA">Fantasma</option>
+                    <option value="GELO">Gelo</option>
+                    <option value="DRAGAO">Dragão</option>
+                    <option value="METAL">Metal</option>
+                    <option value="NOTURNO">Noturno</option>
+                    <option value="FADA">Fada</option>
+                </select>
+            </div>
+            <div class="pull-right">
+                <button type="submit" class="btn btn-success" style="margin-top: 10px;"
+                    (click)="atualizarPokemon(pokemon)" >Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
