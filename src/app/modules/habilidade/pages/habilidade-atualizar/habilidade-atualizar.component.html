@@ -1,0 +1,33 @@
+<div class="container" >
+    <div class="panel panel-default">
+
+        <div class="panel-heading"> 
+            <span>Editar Habilidade</span>
+            <div class="pull-right">
+                <button class="btn btn-default" style="margin-top: -7px;"
+                    (click)="voltar()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+            </div>
+        </div>
+        <div class="panel-body">
+
+            <div class="form-group col-md-4">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome" [(ngModel)]="habilidade.nome">
+            </div>
+            <div class="form-group col-md-5">
+                <label for="descricao">Descrição</label>
+                <input type="text" class="form-control" id="descricao" placeholder="Descrição" [(ngModel)]="habilidade.descricao">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="pokemon">Pokemon</label>
+                <select class="form-control" [(ngModel)]="habilidade.pokemon">
+                    <option *ngFor="let pokemon of pokemons" value="{{pokemon.id}}" id="pokemon">{{pokemon.nome}}</option>
+                </select>
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-success" style="margin-top: 10px;"
+                    (click)="atualizarHabilidade(habilidade)">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

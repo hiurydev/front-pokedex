@@ -38,7 +38,7 @@ export class PokemonListarComponent implements OnInit {
     deletarPokemon(pokemon: any) {
       this.pokemonService.deletarPokemon(pokemon.id)
       .then((result: any) => {
-        alert('Deu liga')
+        this.getAll()
       })
     }
 }

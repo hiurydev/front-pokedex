@@ -9,6 +9,7 @@ import { CategoriaModule } from './modules/categoria/categoria.module';
 import { ProdutoModule } from './modules/produto/produto.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonModule } from './modules/pokemon/pokemon.module';
+import { HabilidadeModule } from './modules/habilidade/habilidade.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PokemonModule } from './modules/pokemon/pokemon.module';
     AppRoutingModule,
     CategoriaModule,
     ProdutoModule,
-    PokemonModule
+    PokemonModule,
+    HabilidadeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

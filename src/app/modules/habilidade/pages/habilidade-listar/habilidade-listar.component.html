@@ -2,34 +2,32 @@
     <div class="panel panel-default">
 
         <div class="panel-heading"> 
-            <span>Lista de Pokemons</span>
+            <span>Lista de Habilidades</span>
             <div class="pull-right">
                 <button class="btn btn-sm btn-success" style="margin-top: -7px;" 
-                    (click)="novoPokemon()" >Novo Pokemon</button>
+                    (click)="novaHabilidade()" >Nova Habilidade</button>
             </div>
         </div>
         <table class="table">
             <thead>
                 <tr>
                   <th class="col-md-1">Código</th>
-                  <th class="col-md-5">Nome</th>
-                  <th class="col-md-2">Porte</th>
-                  <th class="col-md-2">Tipo</th>
+                  <th class="col-md-4">Nome</th>
+                  <th class="col-md-5">Descrição</th>
                   <th class="col-md-1 text-center">Editar</th>
                   <th class="col-md-1 text-center">Excluir</th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let pokemon of pokemons.conteudo">
-                  <td> {{pokemon.id}} </td>  
-                  <td> {{pokemon.nome}} </td>  
-                  <td> {{pokemon.porte}} </td>  
-                  <td> {{pokemon.tipoPokemon}} </td>
+                <tr *ngFor="let habilidade of habilidades.conteudo">
+                  <td> {{habilidade.id}} </td>  
+                  <td> {{habilidade.nome}} </td>  
+                  <td> {{habilidade.descricao}} </td>  
                   <td class="text-center">
-                    <button class="btn btn-xs btn-default" (click)="editarPokemon(pokemon)">Editar</button>
+                    <button class="btn btn-xs btn-default" (click)="editarHabilidade(habilidade)">Editar</button>
                   </td>
                   <td class="text-center">
-                    <button class="btn btn-xs btn-danger" (click)="deletarPokemon(pokemon)">Excluir</button>
+                    <button class="btn btn-xs btn-danger" (click)="deletarHabilidade(habilidade)">Excluir</button>
                   </td>
                 </tr>
               </tbody>

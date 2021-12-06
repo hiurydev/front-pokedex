@@ -43,4 +43,10 @@ export class PokemonService {
     .get<IPageConfig<IPokemon>>('http://localhost:8080/pokemon/')
     .toPromise();
   }
+
+  getFullPokemon(): Promise<IPokemon[]> {
+    return this.httpClient
+    .get<IPokemon[]>('http://localhost:8080/pokemon/full-pokemon')
+    .toPromise();
+  }
 }
