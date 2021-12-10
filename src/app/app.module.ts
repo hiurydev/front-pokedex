@@ -10,12 +10,13 @@ import { ProdutoModule } from './modules/produto/produto.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonModule } from './modules/pokemon/pokemon.module';
 import { HabilidadeModule } from './modules/habilidade/habilidade.module';
+import { VantagemModule } from './modules/vantagem/vantagem.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,8 @@ import { HabilidadeModule } from './modules/habilidade/habilidade.module';
     CategoriaModule,
     ProdutoModule,
     PokemonModule,
-    HabilidadeModule
+    HabilidadeModule,
+    VantagemModule
   ],
   providers: [],
   bootstrap: [AppComponent]

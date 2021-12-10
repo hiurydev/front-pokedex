@@ -1,0 +1,41 @@
+<div class="container" >
+    <div class="panel panel-default">
+
+        <div class="panel-heading"> 
+            <span>Lista de Vantagens</span>
+            <div class="pull-right">
+                <button class="btn btn-sm btn-success" style="margin-top: -7px;" 
+                    (click)="novaVantagem()" >Nova Vantagem</button>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                  <th class="col-md-1">Código</th>
+                  <th class="col-md-4">Pokemon</th>
+                  <th class="col-md-3">Tipo</th>
+                  <th class="col-md-1">Imune</th>
+                  <th class="col-md-1">Pro</th>
+                  <th class="col-md-1 text-center">Editar</th>
+                  <th class="col-md-1 text-center">Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let vantagem of vantagens.conteudo">
+                  <td> {{vantagem.id}} </td>  
+                  <td> {{vantagem.pokemon }} </td>  
+                  <td> {{vantagem.tipoPokemon}} </td>  
+                  <td> {{render(vantagem.imune)}} </td>
+                  <td> {{render(vantagem.pro)}} </td>
+                  <td class="text-center">
+                    <button class="btn btn-xs btn-default" (click)="editarVantagem(vantagem)">Editar</button>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-xs btn-danger" (click)="deletarVantagem(vantagem)">Excluir</button>
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+<!-- | -->

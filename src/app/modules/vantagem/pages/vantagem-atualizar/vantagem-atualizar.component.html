@@ -1,0 +1,66 @@
+<div class="container" >
+    <div class="panel panel-default">
+
+        <div class="panel-heading"> 
+            <span>Cadastro de Vantagem</span>
+            <div class="pull-right">
+                <button class="btn btn-default" style="margin-top: -7px;"
+                    (click)="voltar()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+            </div>
+        </div>
+        <div class="panel-body">
+
+            <div class="form-group col-md-5">
+                <label for="pokemon">Pokemon</label>
+                <select class="form-control" [(ngModel)]="vantagem.pokemon">
+                    <option *ngFor="let pokemon of pokemons" value="{{pokemon.id}}" id="pokemon">{{pokemon.nome}}</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="tipo">Tipo</label>
+                <select class="form-control" [(ngModel)]="vantagem.tipoPokemon">
+                    <option value="PLANTA">Planta</option>
+                    <option value="FOGO">Fogo</option>
+                    <option value="AGUA">Água</option>
+                    <option value="INSETO">Inseto</option>
+                    <option value="NORMAL">Normal</option>
+                    <option value="VENENOSO">Venenoso</option>
+                    <option value="ELETRICO">Elétrico</option>
+                    <option value="TERRA">Terra</option>
+                    <option value="LUTADOR">Lutador</option>
+                    <option value="PSIQUICO">Psíquico</option>
+                    <option value="PEDRA">Pedra</option>
+                    <option value="VOADOR">Voador</option>
+                    <option value="FANTASMA">Fantasma</option>
+                    <option value="GELO">Gelo</option>
+                    <option value="DRAGAO">Dragão</option>
+                    <option value="METAL">Metal</option>
+                    <option value="NOTURNO">Noturno</option>
+                    <option value="FADA">Fada</option>
+                </select>
+            </div>
+            
+            <div class="form-group col-md-2">
+                <label for="tipo">Pro</label>
+                <select class="form-control" [(ngModel)]="vantagem.pro">
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="tipo">Imune</label>
+                <select class="form-control" [(ngModel)]="vantagem.imune">
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+
+            <div class="pull-right">
+                <button class="btn btn-success" style="margin-top: 10px;"
+                    (click)="atualizarVantagem(vantagem)">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
